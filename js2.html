@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/js2.css">
+</head>
+<body>
+    <!-- <script> -->
+ -->
+<!-- </script> -->
+<script>
+
+    let a = prompt("Enter size a (of triangle):", "");
+    if (a == null || a == ''){
+        document.write("<p class = 'p1'>Invalid input for side a</p>")
+    }else{
+        a = +a;
+    }
+    let b = prompt("Enter size b (of triangle):", "");
+        if (b == null || b == ''){
+        document.write("<p class = 'p1'>Invalid input for side b</p>")
+    }else{
+        b = +b;
+    }
+    let c = prompt("Enter size c (of triangle):", "");
+        if (c == null || c == ''){
+        document.write("<p class = 'p1'>Invalid input for side c</p>")
+    }else{
+        c = +c;
+    }
+    if (a <= 0 || b <= 0 || c <= 0 || (a + b <= c) || (a + c <= b) || (b + c <= a)) {
+        document.write("<p class= 'p1'>A triangle with such sides does not exist</p>");
+    } else {
+      let P = a + b + c;
+      let p = P / 2;
+      let S = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+      document.write(`<p class = 'p1'>Perimeter of triangle with sides a=${a}, b=${b}, c=${c} is: ${P}</p>`);
+      document.write(`<p class = 'p1'>Area of triangle with sides a=${a}, b=${b}, c=${c} is: ${S}</p>`);
+      }
+    
+        
+</script>
+</body>
+</html>

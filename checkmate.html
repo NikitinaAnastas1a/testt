@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkmate</title>
+</head>
+<body>
+<!-- <canvas id="rects" width="1200" height="1200">Накладання прямокутників</canvas> -->
+<script>
+    // let canvas = document.getElementById("rects");
+    // let ctx = canvas.getContext("2d");
+
+    // canvas.height = 200;
+    // canvas.width = 300;
+
+    // ctx.fillStyle = "rgb(200, 0, 0)";
+    // ctx.fillRect(15, 15, 100, 100);
+
+    // ctx.fillStyle = "rgb(0, 200, 0)";
+    // ctx.fillRect(30, 30, 100, 100);
+
+    // ctx.fillStyle = "rgb(0, 0, 200)";
+    // ctx.fillRect(45, 45, 100, 100);
+
+    // let c = document.getElementById("rects");
+    // let cxt = c.getContext("2d");
+    // cxt.strokeStyle = '#ffff66'; // колір обводки
+    // cxt.lineWidth = 10; // ширина лінії
+    // cxt.fillStyle = '#dd99ff'; // колір заливки
+
+    // // cxt.fillStyle = "rgb(200, 0, 0)";
+    // let x=15;
+    // let y=15;
+    // for(let i=0;i<100;i++){
+    //     cxt.strokeRect (x, y, 100, 100);
+    //     cxt.fillRect(x, y, 100, 100);
+    //     x=x+15;
+    //     y=y+15;
+    // }
+
+
+
+    
+</script>
+
+
+<!-- 
+
+<canvas id="myCanvas" width="500" height="200"></canvas>
+
+<script>
+let canvas = document.getElementById("myCanvas"),
+    cxt = canvas.getContext("2d");
+
+cxt.strokeStyle = "red";
+cxt.setLineDash([15,5]);
+cxt.strokeRect(40, 40, 100, 100);
+
+cxt.strokeStyle = "blue";
+cxt.setLineDash([2,5,6]);
+cxt.strokeRect(180, 40, 100, 100);
+
+cxt.strokeStyle = "green";
+cxt.setLineDash([2,2]);
+cxt.strokeRect(320, 40, 100, 100);
+</script>
+ -->
+
+
+<canvas id="board" width="400" height="400" style="border: 1px solid;"></canvas>
+
+<script>
+let canvas = document.getElementById("board");
+let ctx = canvas.getContext("2d");
+
+let size = 50;
+
+for (let row = 0; row < 8; row++) {
+  for (let col = 0; col < 8; col++) {
+    if ((row + col) % 2 === 0) {
+      ctx.fillStyle = "white";
+    } else {
+      ctx.fillStyle = "black";
+    }
+    ctx.fillRect(col * size, row * size, size, size);
+  }
+}
+</script>
+
+
+</body>
+</html>

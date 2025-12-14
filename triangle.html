@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/triangle.css">
+</head>
+<body>
+    <script>
+        // let a = +prompt("Введіть сторону а", "");
+        // let b = +prompt("Введіть сторону b", "");
+        // let c = +prompt("Введіть сторону c", "");
+        // let P = a + b + c;
+        // alert(P);
+        // let p = P / 2;
+        // alert(p);
+        // let S = Math.sqrt(p*(p-a)*(p-b)*(p-c));
+        // alert(S);
+        // document.write(`<p>Perimeter of tringle with sides a=${a}, b=${b}, c=${c} is: ${P}</p>`);
+        // document.write(`<p>Area of tringle with sides a=${a}, b=${b}, c=${c} is: ${S}</p>`);
+
+
+
+        let spaceYear = prompt('In what year the first human has flown to space?', '');
+        if(spaceYear === null){
+         alert('Bye!');
+        }
+        else if (spaceYear < 1961) {
+            alert('Too early!');
+            alert('Try again.');
+        }
+        else if (spaceYear > 1961){
+            alert('A lot of people have flown to space by that time!');
+            alert('Try again.');
+        }
+        else if(spaceYear ==1961){
+            alert('Correct answer!');
+            alert('Congrats!!');
+        }
+        else{
+                alert('Not a number!')
+         }
+
+         let characterName = prompt('What arabian country is the most succesful?', '');
+         if(spaceYear === null){
+            alert('Bye-bye!');
+         }
+         else{
+            alert('Incorrect!');
+         }
+        else if (characterName == 'UAE'){
+            alert('Correct!');
+         }
+
+
+    </script>
+</body>
+</html>

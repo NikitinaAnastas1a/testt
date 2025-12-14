@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+    // function showHi() {
+    //     let hi = 'Привіт всім від Функції!';
+    //     alert(hi);
+    // }
+    // showHi();
+    // alert(hi);
+
+
+
+//     let userName = 'ДокторХто';
+// function showHi() {
+//   let hi = 'Привіт тобі, '+ userName + ', від Функції!'; // зовнішня змінна
+//   userName = 'КапітанОчевидність'
+//   alert( hi );
+// }
+// showHi ();
+// alert(userName)
+
+
+
+
+
+// let userName = 'ДокторХто';
+//         function showHi(userName, userSay) {
+//             // тут ми внесли параметр userName, userSay
+//             userName = userName + ' сказав: ';
+//             alert(userName + userSay);
+//         }
+//         showHi ('КапітанОчевидність', 'Привіт!');
+//         showHi ('Микола', 'І тобі Привіт!');
+//         alert('значення змінної (' + userName + ') залишилося без змін!');
+
+
+
+
+        /*function max(x, y){
+            if(x > y){
+                return x;
+            } else{
+                return y;
+            }
+        }
+        alert(max(99, 0.9));
+        alert(max(100, 112));*/
+
+
+
+        function factorial(n) {
+            if (n < 0) {
+                return "Невідповідне";
+            }
+            if (n === 0) {
+                return 1;
+            }
+            return n * factorial(n - 1);
+        }
+        let num = +prompt('Вибери число: ');
+        alert(factorial(num));
+
+
+    </script>
+</body>
+</html>

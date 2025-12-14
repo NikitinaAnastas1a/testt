@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Номери літер</title>
+</head>
+<body>
+  <input id="letterInput" type="text" placeholder="Введіть слово">
+  <button id="checkBtn">Перевірити</button>
+  <pre id="result"></pre>
+  <p id="output"></p>
+
+  <script>
+    const alphabet = [
+      "а","б","в","г","ґ","д","е","є","ж","з","и","і","ї","й",
+      "к","л","м","н","о","п","р","с","т","у","ф","х","ц","ч","ш","щ",
+      "ь","ю","я"
+    ];
+
+    // Виводимо алфавіт
+    document.getElementById("output").textContent = alphabet.join(" ");
+
+    const input = document.getElementById("letterInput");
+    const button = document.getElementById("checkBtn");
+    const result = document.getElementById("result");
+
+    button.addEventListener("click", () => {
+      const word = input.value.toLowerCase().trim();
+      if (word.length === 0) {
+        result.textContent = "Введіть слово або букву.";
+        return;
+      }
+
+      let outputText = "";
+
+      // перебираємо кожну літеру у слові
+      for (const letter of word) {
+        if (letter === " ") {
+          outputText += "(пробіл) — пропускається\n";
+          continue;
+        }
+
+        let position = 1;
+        let found = false;
+
+        // перебір алфавіту для пошуку номера літери
+        for (const char of alphabet) {
+          if (char === letter) {
+            outputText += `${letter} — літера № ${position}\n`;
+            found = true;
+            break;
+          }
+          position++;
+        }
+
+        if (!found) {
+          outputText += `${letter} — немає в українському алфавіті\n`;
+        }
+      }
+
+      result.textContent = outputText;
+    });
+  </script>
+</body>
+</html>

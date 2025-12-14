@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "Kurale";
+    src: url(../fonts/Kurale-Regular.ttf);
+}
+
+img{
+    width: 100%;
+}
+
+body{
+    margin: 0;
+    background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(255, 112, 217, 1) 100%) ;
+    background-repeat: no-repeat;   /* не повторювати */
+    background-attachment: fixed;   /* щоб градієнт був фоном при скролі */
+    background-size: cover;   
+        font-family: "Kurale";
+}
+.header{
+    background-color: pink;
+    height: 60px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-family: "Kurale";
+}
+.header-child{
+
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+
+}
+a:hover{
+    color: rgb(255, 255, 52);
+    transition: linear 8ms;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+main{
+    margin: 0 auto;
+}
+h3{
+    text-align: center;
+    color: rgb(255, 209, 41);
+    font-size: 40px;
+
+}
+img{
+    width: 400px;
+    float: left;
+    margin-right: 20px;
+}
+.container img, p{
+    margin-left: 180px;
+}
+p{
+    color: #fff;
+    font-size: 19px;
+}
+.fluid{
+}
+
+/* CSS */
+.button-35 {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-35:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}

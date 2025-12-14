@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="400"></canvas>
+
+<script>
+
+
+    let canvas = document.getElementById("myCanvas");
+let cxt = canvas.getContext("2d");         
+                                                
+// cxt.beginPath();                           
+// cxt.moveTo(50, 50);                        
+// cxt.lineTo(500, 50);                       
+// cxt.lineWidth = 15;        
+// cxt.strokeStyle = "#ff0000";  
+// cxt.lineCap = "butt";                      
+// cxt.stroke();                              
+                                                
+// cxt.beginPath();                           
+// cxt.moveTo(50, 100);                       
+// cxt.lineTo(500, 100);                      
+// cxt.lineWidth = 15;                        
+// cxt.strokeStyle = "#00ff00";               
+// cxt.lineCap = "round";                     
+// cxt.stroke();                              
+                                                
+// cxt.beginPath();                           
+// cxt.moveTo(50, 150);                       
+// cxt.lineTo(500, 150);                      
+// cxt.lineWidth = 15;                        
+// cxt.strokeStyle = "#0000ff";               
+// cxt.lineCap = "square";                    
+// cxt.stroke();
+
+
+// cxt.beginPath();
+// cxt.moveTo(75,50);
+// cxt.lineTo(100,75);
+// cxt.lineTo(100,25);
+// cxt.fill();
+
+
+
+
+// cxt.beginPath();
+// cxt.moveTo(75,250);
+// cxt.lineTo(250,100);
+// cxt.lineTo(250,400);
+// cxt.fillStyle="red";
+// cxt.fill();
+
+
+
+// let w = canvas.width;
+
+// cxt.beginPath();
+// cxt.moveTo(w - 75, 250);
+// cxt.lineTo(w - 250, 100);
+// cxt.lineTo(w - 250, 400);
+// cxt.fillStyle = "red";
+// cxt.fill();
+
+
+
+
+
+// let x = canvas.width / 2;                                        
+// let y = canvas.height / 2;                                       
+// let radius = 75;                                                 
+// let startAngle = 0.9 * Math.PI;                                  
+// let endAngle = 2.1 * Math.PI;                                    
+// let counterClockwise = false;                                    
+                                                                   
+// cxt.beginPath();                                             
+// cxt.arc(x, y, radius, startAngle, endAngle, counterClockwise);
+// cxt.lineWidth = 15;                                          
+                                                 
+// cxt.strokeStyle = "red";                                   
+// cxt.stroke();
+
+
+
+// cxt.beginPath();
+// cxt.arc(100, 100, 50, 0, Math.PI*2, false);
+// cxt.closePath();
+// cxt.fillStyle="red";
+
+// cxt.fill();
+// cxt.strokeStyle = "yellow";    
+// cxt.stroke()
+
+
+
+
+// let radius = 15;
+
+// for (let i = 0; i < 100; i++) {
+//   let x = Math.random() * (canvas.width - 2 * radius) + radius;
+//   let y = Math.random() * (canvas.height - 2 * radius) + radius;
+
+//   cxt.beginPath();
+//   cxt.arc(x, y, radius, 0, 2 * Math.PI);
+
+//   cxt.fillStyle="yellow";
+//   cxt.fill();
+
+//   cxt.strokeStyle = "orange";  
+//   cxt.stroke();
+// }
+
+
+// cxt.beginPath();
+// cxt.moveTo(188, 150);
+// cxt.quadraticCurveTo(288, 0, 388, 150);
+// cxt.lineWidth = 10;
+// cxt.strokeStyle = "black";
+// cxt.stroke();
+
+
+
+
+// // центр метелика
+// let cx = canvas.width / 2;
+// let cy = canvas.height / 2;
+
+// // тіло
+// cxt.beginPath();
+// cxt.moveTo(cx, cy - 30);
+// cxt.lineTo(cx, cy + 30);
+// cxt.lineWidth = 6;
+// cxt.strokeStyle = "black";
+// cxt.stroke();
+
+// // ліва верхня крила
+// cxt.beginPath();
+// cxt.moveTo(cx, cy);
+// cxt.bezierCurveTo(cx - 80, cy - 100, cx - 120, cy + 20, cx, cy + 20);
+// cxt.fillStyle = "orange";
+// cxt.fill();
+// cxt.stroke();
+
+// // права верхня крила (дзеркально)
+// cxt.beginPath();
+// cxt.moveTo(cx, cy);
+// cxt.bezierCurveTo(cx + 80, cy - 100, cx + 120, cy + 20, cx, cy + 20);
+// cxt.fillStyle = "orange";
+// cxt.fill();
+// cxt.stroke();
+
+// // ліве нижнє крила
+// cxt.beginPath();
+// cxt.moveTo(cx, cy + 10);
+// cxt.bezierCurveTo(cx - 60, cy + 50, cx - 80, cy + 100, cx, cy + 40);
+// cxt.fillStyle = "yellow";
+// cxt.fill();
+// cxt.stroke();
+
+// // праве нижнє крила
+// cxt.beginPath();
+// cxt.moveTo(cx, cy + 10);
+// cxt.bezierCurveTo(cx + 60, cy + 50, cx + 80, cy + 100, cx, cy + 40);
+// cxt.fillStyle = "yellow";
+// cxt.fill();
+// cxt.stroke();
+
+
+
+
+
+let cx = canvas.width / 2;
+let cy = canvas.height / 2 + 20; 
+
+// ліва верхня крила
+cxt.beginPath();
+cxt.moveTo(cx, cy);
+cxt.bezierCurveTo(cx - 80, cy - 100, cx - 120, cy + 20, cx, cy + 20);
+cxt.fillStyle = "#cc99ff";
+cxt.fill();
+cxt.strokeStyle = "#cc66ff";
+cxt.stroke();
+
+// права верхня крила
+cxt.beginPath();
+cxt.moveTo(cx, cy);
+cxt.bezierCurveTo(cx + 80, cy - 100, cx + 120, cy + 20, cx, cy + 20);
+cxt.fillStyle = "#cc99ff";
+cxt.fill();
+cxt.stroke();
+
+// ліве нижнє крила
+cxt.beginPath();
+cxt.moveTo(cx, cy + 10);
+cxt.bezierCurveTo(cx - 60, cy + 50, cx - 80, cy + 100, cx, cy + 40);
+cxt.fillStyle = "#d9b3ff";
+cxt.fill();
+cxt.stroke();
+
+// праве нижнє крила
+cxt.beginPath();
+cxt.moveTo(cx, cy + 10);
+cxt.bezierCurveTo(cx + 60, cy + 50, cx + 80, cy + 100, cx, cy + 40);
+cxt.fillStyle = "#d9b3ff";
+cxt.fill();
+cxt.stroke();
+
+// тіло 
+cxt.beginPath();
+cxt.moveTo(cx, cy - 10); 
+cxt.lineTo(cx, cy + 50); 
+cxt.lineWidth = 6;
+cxt.strokeStyle = "#ffccff";
+cxt.stroke();
+
+// вусики
+cxt.beginPath();
+cxt.moveTo(cx, cy - 10);
+cxt.quadraticCurveTo(cx - 20, cy - 30, cx - 10, cy - 40);
+cxt.moveTo(cx, cy - 10);
+cxt.quadraticCurveTo(cx + 20, cy - 30, cx + 10, cy - 40);
+cxt.lineWidth = 2;
+cxt.strokeStyle = "#ffccff";
+cxt.stroke();
+
+
+
+
+// центр квітки
+let flowerX = cx + 120;
+let flowerY = cy + 50;
+let petalRadius = 15;
+let centerRadius = 20;
+let petals = 6;
+
+// пелюстки
+for (let i = 0; i < petals; i++) {
+  let angle = (i * 2 * Math.PI) / petals;
+  let x = flowerX + Math.cos(angle) * petalRadius * 2;
+  let y = flowerY + Math.sin(angle) * petalRadius * 2;
+
+  cxt.beginPath();
+  cxt.arc(x, y, petalRadius, 0, 2 * Math.PI);
+  cxt.fillStyle = "pink";
+  cxt.fill();
+  cxt.stroke();
+}
+
+// центр квітки
+cxt.beginPath();
+cxt.arc(flowerX, flowerY, centerRadius, 0, 2 * Math.PI);
+cxt.fillStyle = "yellow";
+cxt.fill();
+cxt.stroke();
+
+// стебло
+cxt.beginPath();
+cxt.moveTo(flowerX, flowerY + centerRadius); 
+cxt.lineTo(flowerX, flowerY + 100);         
+cxt.lineWidth = 4;
+cxt.strokeStyle = "lightgreen";
+cxt.stroke();
+
+// листочок (ліворуч)
+cxt.beginPath();
+cxt.ellipse(flowerX - 20, flowerY + 60, 15, 8, -Math.PI / 6, 0, 2 * Math.PI);
+cxt.fillStyle = "lightgreen";
+cxt.fill();
+cxt.stroke();
+
+// листочок (праворуч)
+cxt.beginPath();
+cxt.ellipse(flowerX + 20, flowerY + 80, 15, 8, Math.PI / 6, 0, 2 * Math.PI);
+cxt.fillStyle = "lightgreen";
+cxt.fill();
+cxt.stroke();
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

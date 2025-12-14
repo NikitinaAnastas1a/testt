@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let money = +prompt('Яку суму хочете зняти','');
+if (money < 50 || money > 3000) {
+  alert( 'На жаль, Ви  можете зняти гроші на суму від 50 грн. до 3000 грн.');
+}
+else if (money % 50 === 0){
+    alert(`Заберіть свої гроші в сумі ${money} грн.`)
+}
+else{
+    alert('Сума має бути кратною 50')
+}
+// let clientAge = +prompt('Скільки Вам років?', "");
+// if (clientAge < 18 && clientAge > 100){
+//     alert('Вхід заборонено!');
+// }
+// else{
+//     alert('Вхід одобрено!');
+// }
+
+
+    </script>
+</body>
+</html>

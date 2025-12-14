@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "PirataOne";
+    src: url(../fonts/PirataOne-Regular.ttf);
+}
+
+
+
+*{
+    /* background-color: plum; */
+    background-image: url(../img/horoscope_bkgr.jpg);
+}
+p{
+    text-align: center;
+    font-size: 50px;
+    background-color: lavenderblush;
+    padding: 20px;
+    color: rgb(158, 85, 158);
+    font-family: "PirataOne";
+}
